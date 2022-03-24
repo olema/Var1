@@ -1,0 +1,48 @@
+@page
+@model Var1.Pages.Pacients.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pacient[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pacient[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pacient[0].MedPol)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pacient) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedPol)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PacientID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PacientID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PacientID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

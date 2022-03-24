@@ -1,0 +1,36 @@
+@page
+@model Var1.Pages.Doljn.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WDoljn[0].DoljnName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.WDoljn) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoljnName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.WDoljnID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.WDoljnID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.WDoljnID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

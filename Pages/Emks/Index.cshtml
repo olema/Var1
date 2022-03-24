@@ -1,0 +1,53 @@
+@page
+@model Var1.Pages.Emks.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>ЭМК (индекс)</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Emk[0].InputDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emk[0].Pacient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emk[0].OperID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emk[0].WUser)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Emk) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InputDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pacient.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oper.OperName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WUser.FullName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EmkID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EmkID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EmkID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
