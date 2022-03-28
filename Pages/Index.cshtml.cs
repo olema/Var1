@@ -17,3 +17,8 @@ public class IndexModel : PageModel
 
     }
 }
+
+public class TestClass
+{
+    public string test = "testtesttest";
+}

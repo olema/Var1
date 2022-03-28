@@ -5,8 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
+<h1>Должности</h1>
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -26,8 +25,8 @@
                 @Html.DisplayFor(modelItem => item.DoljnName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.WDoljnID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.WDoljnID">Details</a> |
+                <a asp-page="./Edit" asp-route-id="@item.WDoljnID">Edit</a>
+                <a asp-page="./Details" asp-route-id="@item.WDoljnID">Details</a>
                 <a asp-page="./Delete" asp-route-id="@item.WDoljnID">Delete</a>
             </td>
         </tr>

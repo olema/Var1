@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hZD77qmUwx3etvbQrjtHjHmjnXs6v8k+QmxDWRtCRtk=",
+  "Hash": "ri0y0xflSlZTHyYZhbrdwxYzS33BNL9/MCRO4OMA/VU=",
   "Source": "Var1",
   "BasePath": "_content/Var1",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/ollo/progs/csharp/Dipl/Var1/wwwroot/images/Screenshot.png",
+      "SourceId": "Var1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ollo/progs/csharp/Dipl/Var1/wwwroot/",
+      "BasePath": "_content/Var1",
+      "RelativePath": "images/Screenshot.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Screenshot.png"
     },
     {
       "Identity": "/home/ollo/progs/csharp/Dipl/Var1/wwwroot/js/site.js",
